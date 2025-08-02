@@ -44,10 +44,10 @@ print(min_index)
 print(murders$abb[min_index])
 
 #------------------------------------
-# you need to find the max and min state in crime
-# but you can only use the rank() and sort() function
 
-index <- rank()
+x<- c(31,4,15,92,65)
+print(x)
+rank(x)
 
 
 
