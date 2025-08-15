@@ -83,3 +83,20 @@ top_n_murder_rate = function(N){
 top_n_murder_rate(3)
 top_n_murder_rate(5)
 
+
+# Function to mark states above average rate & plot
+
+
+
+above_avg <- function(){
+  avg <-mean(murders$rate)
+  murders$above_avg <- murders$rate > avg
+  return (murders)
+}
+
+murder_flag <- above_avg()
+murder_flag
+
+ggplot(murder_flag,aes(x=population,y=total,color=above_avg))+
+  geom_point()
+
